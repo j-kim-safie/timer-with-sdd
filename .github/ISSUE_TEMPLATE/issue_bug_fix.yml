@@ -1,0 +1,45 @@
+name: "バグ修正"
+description: "バグを報告して修正します"
+labels: ["sdd:analyze"]
+body:
+  - type: markdown
+    attributes:
+      value: "## バグレポート"
+
+  - type: textarea
+    id: background
+    attributes:
+      label: "背景"
+      description: "このバグをどのように再現できますか？"
+      value: |
+        - 再現手順:
+        - 現在の動作 (バグ):
+        - 期待される動作:
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "バグ詳細"
+      description: "バグに関する追加情報"
+      value: |
+        - 概要:
+        - エラーログ / スタックトレース: (あれば)
+        - スクリーンショット: (あれば)
+        - 発生環境: (OS、デバイス、アプリバージョンなど)
+        - 関連コードパス: (わかれば)
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: "完了基準 (Definition of Done)"
+      description: "このバグが修正されたとみなされる基準は？"
+      value: |
+        - [ ] バグが再現されないこと
+        - [ ] 既存テストが通過すること
+        - [ ] 基準 3:
+    validations:
+      required: true

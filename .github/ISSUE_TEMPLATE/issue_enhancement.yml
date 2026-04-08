@@ -1,0 +1,44 @@
+name: "機能改善"
+description: "既存の機能を改善します"
+labels: ["sdd:analyze"]
+body:
+  - type: markdown
+    attributes:
+      value: "## 機能改善リクエスト"
+
+  - type: textarea
+    id: background
+    attributes:
+      label: "背景"
+      description: "現在の機能のどこが不十分ですか？"
+      value: |
+        - 問題 / 動機:
+        - ユーザーフィードバック: (あれば)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "機能説明"
+      description: "何を変更する必要がありますか？"
+      value: |
+        - 概要:
+        - 現在の動作:
+        - 望ましい動作:
+        - 関連コードパス: (わかれば)
+        - 参考資料: (スクリーンショット、類似アプリの例など)
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: "完了基準 (Definition of Done)"
+      description: "この改善が完了とみなされる基準は？"
+      value: |
+        - [ ] 基準 1:
+        - [ ] 基準 2:
+        - [ ] 基準 3:
+    validations:
+      required: true

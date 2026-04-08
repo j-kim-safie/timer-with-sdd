@@ -1,0 +1,43 @@
+name: "リファクタリング"
+description: "既存のコードをリファクタリングします"
+labels: ["sdd:analyze"]
+body:
+  - type: markdown
+    attributes:
+      value: "## リファクタリングリクエスト"
+
+  - type: textarea
+    id: background
+    attributes:
+      label: "背景"
+      description: "現在のコードのどこが問題ですか？"
+      value: |
+        - 問題 / 動機:
+        - 改善方向:
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "リファクタリング説明"
+      description: "何をリファクタリングする必要がありますか？"
+      value: |
+        - 概要:
+        - 対象コードパス:
+        - 動作変更の有無: (変更なし / あり — ありの場合は詳細記述)
+        - 参考資料: (参考パターン、ドキュメントなど)
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: "完了基準 (Definition of Done)"
+      description: "このリファクタリングが完了とみなされる基準は？"
+      value: |
+        - [ ] 既存テスト全て通過
+        - [ ] 外部動作の変更なし
+        - [ ] 基準 3:
+    validations:
+      required: true
